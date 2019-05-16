@@ -13,3 +13,16 @@ static std::string deleteGap(std::string complex)
 
 	return temp;
 }
+
+static int hasNotPlus(std::string complex)
+{
+	for (int i = 1; i < complex.size(); i++)
+	{
+		if (complex.at(i) == '+')
+			return 0;
+		else if (complex.at(i) == '-')
+		{
+			return i;
+		}
+	}
+}
