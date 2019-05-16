@@ -50,4 +50,50 @@ int readNumerDenom(int& n, int& d, int& n2, int& d2)
 
 	return 1;
 }
-//h
+
+Fraction operator+(Fraction& left, Fraction& right)
+{
+	int numer = (left.getNumer() * right.getDenom()) + (right.getNumer() * left.getDenom());
+	int denom = left.getDenom() * right.getDenom();
+	reduction(numer, denom);
+	return Fraction(numer, denom);
+}
+
+Fraction operator-(Fraction& left, Fraction& right)
+{
+	int numer = (left.getNumer() * right.getDenom()) - (right.getNumer() * left.getDenom());
+	int denom = left.getDenom() * right.getDenom();
+	reduction(numer, denom);
+	return Fraction(numer, denom);
+}
+
+Fraction operator*(Fraction& left, Fraction& right)
+{
+	int numer = left.getNumer() * right.getNumer();
+	int denom = left.getDenom() * right.getDenom();
+	reduction(numer, denom);
+	return Fraction(numer, denom);
+}
+
+Fraction operator/(Fraction& left, Fraction& right)
+{
+	int numer = left.getNumer() * right.getDenom();
+	int denom = left.getDenom() * right.getNumer();
+	reduction(numer, denom);
+	return Fraction(numer, denom);
+}
+
+void reduction(int& numer, int& denom)
+{
+	int cnt = 1;
+	while (cnt <= numer)
+	{
+		if (numer % cnt == 0 && denom % cnt == 0)
+		{
+			numer = numer / cnt;
+			denom = denom / cnt;
+			cnt = 1;
+		}
+		cnt++;
+	}
+}

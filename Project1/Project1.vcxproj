@@ -123,6 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\Desktop\Cplusplus_Sandbox\Fraction.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\Cplusplus_Sandbox\function.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\Cplusplus_Sandbox\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\Desktop\Cplusplus_Sandbox\Fraction.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\Cplusplus_Sandbox\function.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
