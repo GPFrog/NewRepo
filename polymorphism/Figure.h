@@ -4,7 +4,20 @@
 class Figure
 {
 private:
-	int a = 0;
+	int area;
 public:
-	virtual void draw() = 0;
+	Figure()
+	{
+		std::cout << "Figure 생성자" << std::endl;
+	}
+	~Figure()
+	{
+		std::cout << "Figure 소멸자" << std::endl;
+	}
+	virtual void draw();
 };
+
+void Figure::draw()
+{
+	std::cout << "피드" << std::endl;
+}

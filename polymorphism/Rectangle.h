@@ -7,5 +7,11 @@ private:
 	int base;
 	int height;
 public:
+	Rectangle(int b, int h)
+	{
+		base = b;
+		height = h;
+	}
+	~Rectangle(){}
 
 };

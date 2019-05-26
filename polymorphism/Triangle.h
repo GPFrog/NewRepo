@@ -7,6 +7,11 @@ private:
 	int base;
 	int height;
 public:
+	Triangle(int b, int h)
+	{
+		base = b;
+		height = h;
+	}
 	virtual void draw();
 };
 

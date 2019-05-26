@@ -131,6 +131,7 @@
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Diamond.h" />
     <ClInclude Include="Circle.h" />
+    <ClInclude Include="FigureList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
