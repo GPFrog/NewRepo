@@ -62,7 +62,6 @@ void FigureList::deleteFigure(int location = -1)
 		std::cout << "몇번째 도형을 삭제하시겠습니까?(1부터 갯수번째 중 선택 / 현재 차있는 도형의 갯수 : " << top + 1 << ")";
 		std::cin >> userInput;
 	}
-	std::cout << userInput << "번째 도형을 삭제합니다." << std::endl;
 	delete figureList[userInput - 1];
 	for (int i = userInput - 1; i < top; i++)
 	{
