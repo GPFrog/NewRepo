@@ -12,8 +12,8 @@ int main()
 		cout << "1. 도형 추가" << endl;
 		cout << "2. 도형 변경" << endl;
 		cout << "3. 도형 삭제" << endl;
-		cout << "4. 종료" << endl;
-		cout << "5. 명단 보기" << endl;
+		cout << "4. 명단 보기" << endl;
+		cout << "5. 종료" << endl;
 		cout << "메뉴를 선택하여주십시오." << endl;
 		cin >> userInput;
 		switch (userInput)
@@ -29,10 +29,10 @@ int main()
 			list.deleteFigure();
 			break;
 		case 4:
-			return 0;
+			list.showFigureName();
 			break;
 		case 5:
-			list.showFigureName();
+			return 0;
 			break;	
 		default:
 			cout << "잘못된 입력" << endl;

@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <Windows.h>
 
 class Figure
 {
@@ -15,10 +16,17 @@ public:
 		x = 60;
 		y = 20;
 	}
+	//=======가상함수=====
 	virtual ~Figure(){}
 	virtual void draw() {}
 	virtual void showName() {}
 	virtual void setXYNatural() {}
+	//========goto========
+	void gotoxy(short int x, short int y)
+	{
+		COORD pos = { x,y };
+		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+	}
 	//=======getter=======
 	double getArea() { return area; }
 	int getX() { return x; }
@@ -37,11 +45,4 @@ public:
 		xAdder = gainedX;
 		yAdder = gainedY;
 	}
-
 };
-
-void gotoxy(int x, int y)
-{
-	COORD pos = { x,y };
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
-}

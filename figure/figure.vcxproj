@@ -124,6 +124,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="Diamond.cpp" />
+    <ClCompile Include="FigureList.cpp" />
+    <ClCompile Include="Oblong.cpp" />
+    <ClCompile Include="Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Figure.h" />
