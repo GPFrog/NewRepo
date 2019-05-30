@@ -14,10 +14,7 @@ public:
 	}
 	~Circle() {}
 	virtual void draw();
-	int getRadius()
-	{
-		return radius;
-	}
+	int getRadius() { return radius; }
 };
 
 void Circle::draw()

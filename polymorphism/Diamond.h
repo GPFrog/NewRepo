@@ -14,6 +14,7 @@ public:
 		height = h;
 	}
 	~Diamond(){}
+	int getWidth() { return width; }
 	virtual void draw();
 };
 
